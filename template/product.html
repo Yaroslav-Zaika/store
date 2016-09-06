@@ -1,0 +1,18 @@
+<div class="row" ng-hide="error">
+	<div class="col-md-10 col-md-offset-1 col-sm-12 product-block">
+		<div class="row">
+			<div class="col-sm-6 col-md-6">
+					<div class="product-box" ng-hide="errorProduct">
+						<img ng-src="http://smktesting.herokuapp.com/static/{{product.img}}" alt=" ">
+						<div>
+							<h4><span>Название:</span><span>{{product.title}}</span></h4></div>
+						<div>
+							<h4>Описание:</h4><span>{{product.text}}</span></div>
+					</div>
+					<div class="product-error" ng-show="errorProduct">Товар не найден</div>
+			</div>
+			<div my-reviews class="col-sm-6 col-md-6" ng-hide="errorProduct"></div>
+		</div>
+	</div>
+</div>
+<div class="error" ng-show="error">Ошибка</div>

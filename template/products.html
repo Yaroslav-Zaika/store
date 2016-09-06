@@ -1,0 +1,13 @@
+<div class="row" ng-init="requestProducts()">
+	<div class="col-md-12 products">
+		<div class="row">
+			<div class="col-sm-4 col-md-3" ng-repeat="product in products">
+				<div class="well product">
+					<a class="product-link" ng-href="#/product/{{product.id}}">{{product.title}}</a>
+					<a ng-href="#/product/{{product.id}}"><img class="product-img" ng-src="http://smktesting.herokuapp.com/static/{{product.img}}" alt=""></a>
+				</div>
+			</div>
+		</div>
+		<div class="error" ng-show="error">Ошибка</div>
+	</div>
+</div>

@@ -1,0 +1,25 @@
+<div class="reviews">
+	<div ng-hide="errorReview">
+		<div class="form">
+			<textarea class="textarea form-control" ng-model="text" name="" id="" placeholder="Введите свой отзыв ..." rows="3"></textarea>
+			<span uib-rating class="star" ng-model="rate" max="max" read-only="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null" ng-click="" on-leave="overStar = null" aria-labelledby="default-rating"></span>
+			<button class="btn btn-default" ng-click="reviewsAdd(rate, text)">Отправить</button>
+		</div>
+		<div class="auth-error" ng-show="authErr">Вы должны войти в систему</div>
+		<div class="auth-error" ng-show="rateErr">Выставьте оценку</div>
+		<div class="auth-error" ng-show="textErr">Отзыв не введен</div>
+		<div ng-show="reviewAddErr">Отзыв не получилось добавить. Попробуйте еще раз.</div>
+		<h3>Отзывы</h3>
+		<ul class="reviews-list">
+			<li class="review" ng-repeat="review in reviews |  orderBy:'id':true">
+				<div class="username"><span>Пользователь</span><span>{{review.created_by.username}}</span></div>
+				<div class="rate"><span>Оценка</span>
+					<span uib-rating class="star" ng-model="review.rate" max="max" read-only="true" on-leave="overStar = null" aria-labelledby="default-rating"></span>
+				</div>
+				<div class="review-text"></div><span>Комментарий:</span><span>{{review.text}}</span>
+			</li>
+			<li ng-show="errorReviews">Отзывов нет</li>
+		</ul>
+	</div>
+	<div ng-show="error">Ошибка</div>
+</div>

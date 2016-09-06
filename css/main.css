@@ -1,0 +1,113 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	color: #789292;
+}
+
+img {
+	width: 100%;
+	max-width: 250px;
+}
+
+.header {
+	font-size: 24px;
+	line-height: 59px;
+}
+
+.authentication-box {
+	text-align: right;
+	margin: 10px 0 15px;
+}
+
+ul,
+li {
+	list-style-type: none;
+}
+
+.products {
+	margin-top: 25px;
+}
+
+
+.product {
+	height: 250px;
+}
+
+.product-link {
+	padding-left: 5px;
+}
+
+.product-img {
+	height: 200px;
+}
+
+.product-error {
+	text-align: center;
+}
+
+.product-block {
+	margin-top: 30px;
+}
+
+.product-box {
+	margin: 0 5px 15px;
+}
+
+.product-box span {
+	margin-right: 5px;
+}
+
+.form .star {
+	cursor: pointer;
+}
+
+.star {
+	color: #ffb400;
+	font-size: 16px;
+	margin-left: 3px;
+}
+
+
+.reviews .textarea {
+	margin-bottom: 10px;
+	resize: none;
+}
+
+.reviews button {
+	float: right;
+}
+
+.auth-error {
+	margin: 10px 0 0 10px;
+}
+
+.review {
+	margin-bottom: 5px;
+	padding: 5px;
+	background: #bff38f;
+	border-top-right-radius: 4px;
+	border-top-left-radius: 4px;
+}
+
+.reviews-list {
+	margin: 5px;
+}
+
+.review span {
+	margin-right: 5px;
+}
+
+.reviews span:focus {
+	outline: none;
+}
+
+.error {
+	text-align: center;
+}
